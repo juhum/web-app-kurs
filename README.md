@@ -4,7 +4,7 @@
 
 To get started with this project using Gitpod, follow these steps:
 
-1. Click on the following link to open the project in Gitpod:
+1. Click on the following button to open the project in Gitpod:
 
    [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/juhum/web-app-kurs)
 
@@ -55,6 +55,4 @@ To get started with this project using Gitpod, follow these steps:
 
 11. In the Gitpod Panel, click on Ports and then "Make Public" button.
 
-12. Add the ports used by both the backend and frontend servers. For example, if your backend runs on port 3000 and frontend on port 8080, add these ports.
-
-13. Visit the provided link in second terminal in your browser to see the application in action.
+12. Visit the provided link in second terminal in your browser to see the application in action.
