@@ -1,6 +1,13 @@
 const express  = require('express');
 const httpServer = express();
 const dialer = require('dialer').Dialer;
+const { Server } = require('socket.io');
+
+const serverInstance = httpServer.listen(3000, 
+  function () {
+   console.log('Example app listening on port 3000!')
+  })
+  const io = new Server(serverInstance)
 
 require('dotenv').config()
 const config = {
@@ -11,9 +18,6 @@ const config = {
 
 dialer.configure(config);
 
-httpServer.listen(3000, function () {
- console.log('Example app listening on port 3000!')
-})
 
 httpServer.get('/call/:number1/:number2', (req, res) => {
     const number1 = req.params.number1;
@@ -37,22 +41,27 @@ httpServer.post('/call/', async (req, res) => {
   const number1 = req.body.number;
   const number2 = process.env.NUMBER2;
   console.log('Dzwonie', number1, number2)
-  const bridge = await dialer.call(number1, number2);
+  bridge = await dialer.call(number1, number2);
+  let oldStatus = null
   let interval = setInterval(async () => {
-    let status = await bridge.getStatus();
-    console.log(status)
+    let currentStatus = await bridge.getStatus();
+    if (currentStatus !== oldStatus) {
+       oldStatus = currentStatus
+       io.emit('status', currentStatus)
+    }
     if (
-      status === "ANSWERED" ||
-      status === "FAILED" ||
-      status === "BUSY" ||
-      status === "NO ANSWER"
-      ) {
-        console.log("stop");
-        clearInterval(interval);
-      }
-    }, 2000);
-    res.json({ success: true });
-})
+      currentStatus === "ANSWERED" ||
+      currentStatus === "FAILED" ||
+      currentStatus === "BUSY" ||
+      currentStatus === "NO ANSWER"
+  ) {
+      console.log('stop')
+      clearInterval(interval)
+  }
+ }, 1000)
+ res.json({ id: '123', status: bridge.STATUSES.NEW 
+ });
+ })
 
 httpServer.get('/status', async function (req, res) {
     let status = await bridge.getStatus();

@@ -10,7 +10,7 @@ To get started with this project using Gitpod, follow these steps:
 
    This will automatically start a Gitpod workspace with the project.
 
-2. Open the `.env` file and update the following configuration variables with your own values:
+2. Open the `.env` file in backend directory and update the following configuration variables with your own values:
 
     ```plaintext
     URL=your-api-url
