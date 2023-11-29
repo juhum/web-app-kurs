@@ -33,21 +33,37 @@ To get started with this project using Gitpod, follow these steps:
     cd backend
     ```
 
-6. Run the backend server:
+6. Install npm:
+
+    ```bash
+    npm install
+    ```
+
+7. Run the backend server:
 
     ```bash
     node index.js
     ```
 
-7. Open a second terminal in Gitpod.
+8. Open a second terminal in Gitpod.
 
-8. Navigate to the frontend directory:
+9. Navigate to the frontend directory:
 
     ```bash
     cd front
     ```
 
-9. Run the frontend application:
+10. Enter commands one by one:
+
+    ```bash
+    npm install -g @vue/cli
+    npm i -S @vue/cli-service
+    gp env -u VUE_APP_SERVER_URL
+    gp env VUE_APP_SERVER_URL=$(gp url 3000)
+    eval $(gp env -e)
+    ```
+
+10. Run the frontend application:
 
     ```bash
     npm run serve
