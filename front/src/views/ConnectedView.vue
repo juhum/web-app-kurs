@@ -3,6 +3,8 @@
     <div class="text">
       Trwa połączenie... 
       <br>
+      </div>
+      <div class="time">
       {{ formattedTime }}
     </div>
   </div>

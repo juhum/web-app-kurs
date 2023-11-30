@@ -113,4 +113,28 @@
     border: 1px solid #e74c3c; 
     background: #f9ebae; 
   }
+
+  .time{
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 70px;
+    color: #333;
+  }
+
+  .loading {
+  margin: auto;
+  margin-top: 100px;
+  border: 10px solid white;
+  border-radius: 80%;
+  border-top: 10px solid #3498db; 
+  width: 80px;
+  height: 80px;
+  animation: spinner 3s ease-in-out infinite;
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 </style>

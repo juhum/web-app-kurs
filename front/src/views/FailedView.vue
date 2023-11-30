@@ -1,10 +1,10 @@
 <template>
  <div class="box">
    <div class="text">
-     Połączenie zakończone.
+     Wystąpił problem z połączeniem
    </div>
    <div class="call-button-bottom"  @click="$router.push(`/`)">
-     Zakończ
+     Spróbuj ponownie
    </div>
  </div>
 </template>
