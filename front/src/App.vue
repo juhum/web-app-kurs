@@ -140,4 +140,11 @@
 .client-number{
   margin: 20px;
 }
+.header-not-found{
+  font-size: 120px;
+  margin-bottom: 30px;
+}
+.text-not-found{
+  font-size: 50px;
+}
 </style>

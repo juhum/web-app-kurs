@@ -18,6 +18,7 @@ export default {
     return {
       number: "",
       todayCalls: [],
+      callStatus: null,
     };
   },
   methods: {
@@ -40,13 +41,14 @@ export default {
         );
 
         let response = await responseStream.json();
+        localStorage.setItem("callInitiated", "true");
         this.$router.push({
           name: "ringing",
           params: { callsId: response.id },
         });
       } catch (error) {
         console.error("Error calling API:", error);
-        this.$router.push({ name: "failed" }); 
+        this.$router.push({ name: "failed" });
       }
     },
     async fetchTodayCalls() {
@@ -73,7 +75,7 @@ export default {
     },
   },
   mounted() {
-    this.fetchTodayCalls(); 
+    this.fetchTodayCalls();
   },
 };
 </script>

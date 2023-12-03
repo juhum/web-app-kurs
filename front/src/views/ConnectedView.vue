@@ -1,10 +1,10 @@
 <template>
   <div class="box">
     <div class="text">
-      Trwa połączenie... 
-      <br>
-      </div>
-      <div class="time">
+      Trwa połączenie...
+      <br />
+    </div>
+    <div class="time">
       {{ formattedTime }}
     </div>
   </div>
@@ -31,10 +31,12 @@ export default {
     formatTime() {
       const minutes = Math.floor(this.timeLeft / 60);
       const seconds = this.timeLeft % 60;
-      this.formattedTime = `${this.padNumber(minutes)}:${this.padNumber(seconds)}`;
+      this.formattedTime = `${this.padNumber(minutes)}:${this.padNumber(
+        seconds
+      )}`;
     },
     padNumber(number) {
-      return number.toString().padStart(2, '0');
+      return number.toString().padStart(2, "0");
     },
   },
   beforeUnmount() {
