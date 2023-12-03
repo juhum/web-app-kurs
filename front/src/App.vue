@@ -44,8 +44,10 @@ html {
   height: 100%;
   background: #fdfaf6;
 }
+
 .window {
-  width: 800px;
+  width: 80%;
+  max-width: 800px;
   height: 500px;
   position: absolute;
   top: 0;
@@ -108,7 +110,8 @@ html {
 }
 
 .form-number {
-  width: 400px;
+  width: 80%;
+  max-width: 400px;
   height: 55px;
   padding: 20px;
   box-sizing: border-box;
@@ -117,11 +120,13 @@ html {
   text-align: center;
   background: #ffffff;
   border: 1px solid #ddd;
+
 }
 
 .call-button,
 .call-button-bottom {
-  width: 300px;
+  width: 80%;
+  max-width: 300px;
   height: 75px;
   vertical-align: middle;
   font-size: 22px;
@@ -208,7 +213,7 @@ html {
   font-size: 20px;
   background: none;
   border: none;
-  color: #333; /* Adjust the color as needed */
+  color: #333; 
 }
 
 .hidden {
@@ -220,7 +225,7 @@ html {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  margin-bottom: 20px; /* Adjust the margin as needed */
+  margin-bottom: 20px; 
 }
 
 .slide-enter-from,
@@ -238,6 +243,32 @@ html {
 }
 .fade-enter-from, .fade-leave-to {
   opacity: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .window {
+    width: 90%;
+    height: 80%;
+  }
+
+  .form-number,
+  .call-button,
+  .call-button-bottom {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .window {
+    width: 85%;
+    height: 75%;
+  }
+
+  .form-number,
+  .call-button,
+  .call-button-bottom {
+    width: 85%;
+  }
 }
 
 </style>
