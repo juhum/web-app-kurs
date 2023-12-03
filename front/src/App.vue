@@ -1,12 +1,40 @@
 <template>
-  <div class="window">
-    <router-view v-slot="{ Component }">
-      <transition name="route" mode="out-in">
-        <component :is="Component"></component>
-      </transition>
-    </router-view>
+  <div>
+    <transition name="slide">
+      <div class="window" v-if="!isWindowHidden">
+        <button class="close-button" @click="hideWindow">×</button>
+        <router-view v-slot="{ Component }">
+          <transition name="route" mode="out-in">
+            <component :is="Component"></component>
+          </transition>
+        </router-view>
+      </div>
+    </transition>
+    <transition name="fade" mode="out-in">
+      <div class="window-open" v-if="isWindowHidden">
+        <button class="call-button" @click="showWindow">Otwórz Widget</button>
+      </div>
+    </transition>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isWindowHidden: false,
+    };
+  },
+  methods: {
+    hideWindow() {
+      this.isWindowHidden = true;
+    },
+    showWindow() {
+      this.isWindowHidden = false;
+    },
+  },
+};
+</script>
 
 <style>
 body,
@@ -171,4 +199,45 @@ html {
 .route-leave-active {
   transition: all 0.3s ease-in;
 }
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #333; /* Adjust the color as needed */
+}
+
+.hidden {
+  display: none;
+}
+
+.window-open {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateY(170%);
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s ease-in-out;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.7s;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
 </style>
