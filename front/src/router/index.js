@@ -48,6 +48,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  document.title = to.name;
   if (to.meta.requiresAuth) {
     const callInitiated = localStorage.getItem('callInitiated');
     if (callInitiated === 'true') {
