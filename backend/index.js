@@ -52,7 +52,7 @@ httpServer.post('/call/', async (req, res) => {
 
   try {
     await makeCall(number1, number2);
-  
+
     if (bridge) {
       res.json({ id: '123', status: bridge.STATUSES.NEW });
     } else {
@@ -156,7 +156,7 @@ httpServer.get('/call-history', async function (req, res) {
 });
 
 httpServer.get('/today-calls', async function (req, res) {
-  const todayDate = new Date().toISOString().split('T')[0]; 
+  const todayDate = new Date().toISOString().split('T')[0];
 
   db.all('SELECT * FROM calls WHERE DATE(timestamp) = ? AND status = ?', [todayDate, 'ANSWERED'], (error, rows) => {
     if (error) {

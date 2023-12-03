@@ -21,7 +21,7 @@ To get started with this project using Gitpod, follow these steps:
 
     Replace `your-api-url`, `your-login`, `your-password`, and `your-number` with the appropriate information for your setup.
 
-    **Note:** Keep this file secure and never share it with others. It contains sensitive information necessary for the proper functioning of the application.
+    **Note:** If you want to use fake api do not change anything.
 
 3. Save the `.env` file.
 
@@ -33,7 +33,7 @@ To get started with this project using Gitpod, follow these steps:
     cd backend
     ```
 
-6. Install npm:
+6. Run:
 
     ```bash
     npm install
@@ -56,8 +56,7 @@ To get started with this project using Gitpod, follow these steps:
 10. Enter commands one by one:
 
     ```bash
-    npm install -g @vue/cli
-    npm i -S @vue/cli-service
+    npm install
     gp env -u VUE_APP_SERVER_URL
     gp env VUE_APP_SERVER_URL=$(gp url 3000)
     eval $(gp env -e)

@@ -120,7 +120,6 @@ html {
   text-align: center;
   background: #ffffff;
   border: 1px solid #ddd;
-
 }
 
 .call-button,
@@ -213,7 +212,7 @@ html {
   font-size: 20px;
   background: none;
   border: none;
-  color: #333; 
+  color: #333;
 }
 
 .hidden {
@@ -225,7 +224,7 @@ html {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .slide-enter-from,
@@ -238,10 +237,12 @@ html {
   transition: transform 0.3s ease-in-out;
 }
 
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.7s;
 }
-.fade-enter-from, .fade-leave-to {
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
 }
 
@@ -270,5 +271,4 @@ html {
     width: 85%;
   }
 }
-
 </style>
