@@ -9,8 +9,13 @@ To get started with this project using Gitpod, follow these steps:
    [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/juhum/web-app-kurs)
 
    This will automatically start a Gitpod workspace with the project.
+   
+   or clone the repository on your computer
+   ```bash
+   git clone https://github.com/juhum/web-app-kurs.git
+   ```
 
-2. Open the `.env` file in backend directory and update the following configuration variables with your own values:
+3. Open the `.env` file in backend directory and update the following configuration variables with your own values:
 
     ```plaintext
     URL=your-api-url
@@ -23,37 +28,37 @@ To get started with this project using Gitpod, follow these steps:
 
     **Note:** If you want to use fake api do not change anything.
 
-3. Save the `.env` file.
+4. Save the `.env` file.
 
-4. Open a new terminal in Gitpod.
+5. Open a new terminal in Gitpod.
 
-5. Navigate to the backend directory:
+6. Navigate to the backend directory:
 
     ```bash
     cd backend
     ```
 
-6. Run:
+7. Run:
 
     ```bash
     npm install
     ```
 
-7. Run the backend server:
+8. Run the backend server:
 
     ```bash
     node index.js
     ```
 
-8. Open a second terminal in Gitpod.
+9. Open a second terminal in Gitpod.
 
-9. Navigate to the frontend directory:
+10. Navigate to the frontend directory:
 
     ```bash
     cd front
     ```
 
-10. Enter commands one by one:
+11. Enter commands one by one:
 
     ```bash
     npm install
