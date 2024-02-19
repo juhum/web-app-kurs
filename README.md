@@ -3,7 +3,7 @@
 This is a web application that facilitates the connection of customer calls with consultants.
 
 
-![showcase](https://github.com/juhum/web-app-kurs/blob/master/showcase.gif)
+![showcase](https://github.com/juhum/web-app-kurs/blob/main/showcase.gif)
 
 ## Getting Started
 
