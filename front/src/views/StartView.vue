@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="header clearfix">Zadzwonimy do Ciebie w ciągu 26 sekund.</div>
+    <div class="header clearfix">We will call you back within 26 seconds.</div>
     <label class="form-label clearfix" for="form-number">
-      Wprowadź numer
+      Enter number
     </label>
     <div class="client-number">
-      Dzisiaj obsłuzyliśmy już <b>{{ todayCalls.length }}</b> klientów.
+      Today we have already served <b>{{ todayCalls.length }}</b> clients.
     </div>
     <input v-model="number" class="form-number clearfix" id="form-number" />
-    <div class="call-button" @click="call">Zadzwoń teraz</div>
+    <div class="call-button" @click="call">Call now</div>
   </div>
 </template>
 

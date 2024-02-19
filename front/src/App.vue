@@ -12,7 +12,7 @@
     </transition>
     <transition name="fade" mode="out-in">
       <div class="window-open" v-if="isWindowHidden">
-        <button class="call-button" @click="showWindow">Otwórz Widget</button>
+        <button class="call-button" @click="showWindow">Open Widget</button>
       </div>
     </transition>
   </div>

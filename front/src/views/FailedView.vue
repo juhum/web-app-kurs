@@ -1,8 +1,8 @@
 <template>
   <div class="box">
-    <div class="text">Wystąpił problem z połączeniem</div>
+    <div class="text">There was a problem with the connection</div>
     <div class="call-button-bottom" @click="endCallAndNavigate">
-      Spróbuj ponownie
+      Try again
     </div>
   </div>
 </template>

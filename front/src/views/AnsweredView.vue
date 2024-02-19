@@ -1,7 +1,7 @@
 <template>
   <div class="box">
-    <div class="text">Połączenie zakończone.</div>
-    <div class="call-button-bottom" @click="endCallAndNavigate">Zakończ</div>
+    <div class="text">Connection ended.</div>
+    <div class="call-button-bottom" @click="endCallAndNavigate">End</div>
   </div>
 </template>
 <script>

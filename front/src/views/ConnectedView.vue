@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <div class="text">
-      Trwa połączenie...
+      Connected...
       <br />
     </div>
     <div class="time">
