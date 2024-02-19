@@ -1,5 +1,10 @@
 # Dialer App
 
+This is a web application that facilitates the connection of customer calls with consultants.
+
+
+![showcase](https://github.com/juhum/web-app-kurs/blob/master/showcase.gif)
+
 ## Getting Started
 
 To get started with this project using Gitpod, follow these steps:
@@ -76,3 +81,6 @@ To get started with this project using Gitpod, follow these steps:
 11. In the Gitpod Panel, click on Ports and then "Make Public" button.
 
 12. Visit the provided link in second terminal in your browser to see the application in action.
+
+
+
